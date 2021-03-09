@@ -71,6 +71,7 @@ jobs:
           mv src guides
           mv loopReplacements.properties guides
           mv replacements.properties guides
+          mv pom.xml guides
           git init
           cd guides
           mkdir -p instructions/cloud-hosted-${{matrix.guides.guide}}/
