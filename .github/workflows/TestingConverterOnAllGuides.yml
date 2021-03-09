@@ -75,9 +75,9 @@ jobs:
           git init
           cd guides
           mkdir -p instructions/cloud-hosted-${{matrix.guides.guide}}/
-          rm -f guides/instructions/cloud-hosted-${{matrix.guides.guide}}/README.md
+          rm -f instructions/cloud-hosted-${{matrix.guides.guide}}/README.md
           mvn compiler:compile
-          mvn exec:java -Dexec.args="guides/${{matrix.guides.guide}} ${branchName:11}"
+          mvn exec:java -Dexec.args="${{matrix.guides.guide}} ${branchName:11}"
           rm -f importFunctions.class
           rm -f functions.class
           rm -f CloudHostedGuideConverter.class
