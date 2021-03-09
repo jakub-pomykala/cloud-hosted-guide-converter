@@ -9,10 +9,6 @@ on:
         description: 'Branch pushed to'     
         required: true
         default: 'refs/heads/qa'
-      GuideConverterBranch:
-        description: 'GuideConverter branch to use'
-        required: true
-        default: 'refs/heads/main'
         
 jobs:
 
