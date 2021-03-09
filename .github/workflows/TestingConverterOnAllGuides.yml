@@ -68,10 +68,13 @@ jobs:
       - name: Run Converter
         run: |
           branchName=${{ github.event.inputs.branch }}
+          mv src guides
+          mv loopReplacements.properties guides
+          mv replacements.properties guides
           git init
+          cd guides
           mkdir -p instructions/cloud-hosted-${{matrix.guides.guide}}/
           rm -f guides/instructions/cloud-hosted-${{matrix.guides.guide}}/README.md
-          cd GuideConverter
           mvn compiler:compile
           mvn exec:java -Dexec.args="guides/${{matrix.guides.guide}} ${branchName:11}"
           rm -f importFunctions.class
