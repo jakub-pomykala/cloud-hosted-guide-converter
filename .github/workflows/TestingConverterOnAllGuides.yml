@@ -98,6 +98,6 @@ jobs:
           token: ${{ secrets.GUIDECONVERSIONTOOL_PASSWORD }}
           body: "Updated by github actions, triggered by the MANUAL ACTION"
           branch: "cloud-hosted-${{matrix.guides.guide}}/staging"
-          base: "staging"
+          base: "jakub-test-fix"
           # labels: "RunTests"
         name: Create Pull Request
