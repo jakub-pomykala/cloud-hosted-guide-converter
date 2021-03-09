@@ -82,7 +82,6 @@ jobs:
           git config --global user.name "GuidesBot"
           git commit -m "Updated by github actions from ALL Guides"
           git checkout --ours instructions/cloud-hosted-${{matrix.guides.guide}}/instructions.md
-        continue-on-error: true
 
       - uses: peter-evans/create-pull-request@v3
         with:
@@ -93,4 +92,3 @@ jobs:
           base: "staging"
           # labels: "RunTests"
         name: Create Pull Request
-        continue-on-error: true
