@@ -81,7 +81,7 @@ jobs:
           rm -f importFunctions.class
           rm -f functions.class
           rm -f CloudHostedGuideConverter.class
-          rm -f src
+          rmdir -f src
           rm -f loopReplacements.properties
           rm -f pom.xml
           rm -f replacements.properties
