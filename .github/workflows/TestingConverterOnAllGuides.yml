@@ -96,7 +96,6 @@ jobs:
         with:
           title: "To Staging: Change to ${{matrix.guides.guide}}"
           token: ${{ secrets.GUIDECONVERSIONTOOL_PASSWORD }}
-          push-to: jakub-pomykala/cloud-hosted-guides
           body: "Updated by github actions, triggered by the MANUAL ACTION"
           branch: "cloud-hosted-${{matrix.guides.guide}}/staging"
           base: "staging"
