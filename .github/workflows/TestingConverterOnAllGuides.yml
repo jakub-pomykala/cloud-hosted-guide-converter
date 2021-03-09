@@ -86,8 +86,8 @@ jobs:
           rm -f pom.xml
           rm -f replacements.properties
           mv ${{matrix.guides.guide}}.md instructions/cloud-hosted-${{matrix.guides.guide}}/instructions.md
-          git config --global user.email "jakub.pomykala@hotmail.co.uk"
-          git config --global user.name "jakub-pomykala"
+          git config --global user.email "GuidesBot@OpenLiberty.io"
+          git config --global user.name "GuidesBot"
           git add .
           git commit -m "Updated by github actions from ALL Guides"
           git checkout --ours instructions/cloud-hosted-${{matrix.guides.guide}}/instructions.md
