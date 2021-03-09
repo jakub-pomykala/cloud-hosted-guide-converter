@@ -9,6 +9,10 @@ on:
         description: 'Branch pushed to'     
         required: true
         default: 'refs/heads/qa'
+      GuideConverterBranch:
+        description: 'GuideConverter branch to use'
+        required: true
+        default: 'refs/heads/main'
         
 jobs:
 
@@ -28,5 +32,5 @@ jobs:
         workflow: ManuallyConverterAllGuides
         repo: jakub-pomykala/cloud-hosted-guides
         token: ${{ secrets.GUIDECONVERSIONTOOL_PASSWORD }}
-        inputs: '{ "branch": "${{ github.ref }}", "guide_name": "${{ github.event.repository.name }}" }'
+        inputs: '{ "branch": "${{ github.ref }}", "GuideconverterBranch": "${{ github.event.push.ref }}" }'
         ref: "refs/heads/prod"
