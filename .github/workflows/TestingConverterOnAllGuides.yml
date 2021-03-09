@@ -82,7 +82,6 @@ jobs:
           rm -f functions.class
           rm -f CloudHostedGuideConverter.class
           mv ${{matrix.guides.guide}}.md instructions/cloud-hosted-${{matrix.guides.guide}}/instructions.md
-          cd guides
           git add .
           git config --global user.email "GuidesBot@OpenLiberty.io"
           git config --global user.name "GuidesBot"
