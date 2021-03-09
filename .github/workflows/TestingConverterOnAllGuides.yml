@@ -41,8 +41,10 @@ jobs:
       - name: Checkout Cloud-hosted-guides repo
         uses: actions/checkout@v2
         with:
+          ref: staging
           repository: jakub-pomykala/cloud-hosted-guides
           path: guides
+
       - name: Checkout guide repo
         uses: actions/checkout@v2
         with:
